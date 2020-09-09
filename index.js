@@ -9,3 +9,9 @@ function destructivelyUpdateDriverWithKeyAndValue(driver, key, value) {
   driver[key] = value;
   return driver
 }
+
+function deleteFromDriverByKey(driver, key) {
+  const newObj = Object.assign({}; driver);
+  delete newObj[key];
+  return newObj;
+}
